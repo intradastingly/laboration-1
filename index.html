@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Page 1</title>
     <link href="./style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
     <script src="./script.js"></script>
@@ -11,9 +11,17 @@
 <body>
     <main class = "flex">
         <div class="container">
-            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nostrum quaerat nihil beatae doloribus aliquam maxime dolor. Voluptas iure vel culpa dolores distinctio fugit quibusdam rem officiis fugiat? Fuga, cumque.</div>
+            <div class="text">You check your pockets for clues, 
+                            you find a piece of paper with a name scribbled on it, 
+                            a Chinese take-out restaurant business card and a mobile phone with no battery.
+                            Where should you start?</div>
+            <ol>
+                <li>Piece of paper</li>
+                <li>Business card</li>
+                <li>Mobile phone</li>
+            </ol>
             <div class="input-container">
-                <input value="" id="choice"/>
+                <input value="pick a number" id="choice" onfocus="this.value=''"/>
                 <button class="confirm button">confirm</button>
                 <button class="go-back button">go back</button>
             </div>
