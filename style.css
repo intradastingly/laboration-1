@@ -6,6 +6,10 @@
     font-size: 1.2rem;
 }
 
+body {
+    background-color: black;
+}
+
 .container {
     background-color:;
     height: 20rem;
@@ -25,7 +29,11 @@
 .button {
     margin: 0rem 0.1rem 0rem 0.2rem;   
     width: 6rem;
+    padding: 0.1rem;
     white-space: nowrap;
+    color: greenyellow;
+    background-color: rgb(29, 82, 31);
+    border: none;
 }
 
 input {
@@ -34,15 +42,19 @@ input {
     padding: 0.1rem;
 }
 
-
-
 .text {
     text-align: center;
     padding: 2rem;
+    color: rgb(0, 255, 21);
+}
+
+main {
+    height: 50rem;
 }
 
 .flex {
     display: flex;
     justify-content: center;
     align-content: center;
+    align-items: center;
 }
