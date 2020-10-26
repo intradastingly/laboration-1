@@ -73,3 +73,10 @@ ul {
 li {
     color: rgb(0, 255, 21);
 }
+
+.container-video {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
