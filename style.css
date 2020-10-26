@@ -63,7 +63,7 @@ main {
     align-items: center;
 }
 
-ol {
+ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
