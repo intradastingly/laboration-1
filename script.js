@@ -12,41 +12,41 @@ function displayNoneList(){
 function userChoice() {
     let choice = onUserInput();
     if (choice == "Piece of paper") {
-        document.getElementById("text").innerHTML = "You picked a piece of paper";
+        document.getElementById("text").innerHTML = "You take the piece of paper out of your pocket and hold it up";
         displayNoneList();
         setTimeout(pieceOfPaper, 2000);
     } else if (choice == "Business card") {
-        document.getElementById("text").innerHTML = "You picked the business card";
+        document.getElementById("text").innerHTML = "You take the business card out of your pocket and read it";
         displayNoneList();
         setTimeout(businessCard, 2000);
     } else if (choice == "Mobile phone") {
-        document.getElementById("text").innerHTML = "You picked the mobile phone";
+        document.getElementById("text").innerHTML = "You try to turn on the phone but it is dead";
         displayNoneList();
         setTimeout(mobilePhone, 2000);
-    } else if (choice == "Business card") {
-        document.getElementById("text").innerHTML = "You picked Talk to the man";
+    } else if (choice == "Talk to the man") {
+        document.getElementById("text").innerHTML = "Why hello there, good sir! Would you by any chance happen to know who George Hungus is?";
         displayNoneList();
-        setTimeout(businessCard, 2000);
-    } else if (choice == "Mobile phone") {
-        document.getElementById("text").innerHTML = "You picked knock on the door";
+        setTimeout(businessCard, 4000);
+    } else if (choice == "Knock on the door") {
+        document.getElementById("text").innerHTML = "You step forward and knock on the door, the man looks at you suspiciously";
         displayNoneList();
         setTimeout(mobilePhone, 2000);
     } else if (choice == "Attack the gaurds") {
         window.location.href = './died.html';
     } else if (choice == "Try to enter") {
-        document.getElementById("text").innerHTML = "You picked try to enter";
+        document.getElementById("text").innerHTML = "You begin walking towards the armed gaurds, who all turn to look at you, scowling";
         displayNoneList();
         setTimeout(mobilePhone, 2000);
     } else if (choice == "Rob the antique store") {
-        document.getElementById("text").innerHTML = "You picked rob the antique store";
+        document.getElementById("text").innerHTML = "You run into the store and try to rob it";
         displayNoneList();
         setTimeout(businessCard, 2000);
     } else if (choice == "Ask to use charger") {
-        document.getElementById("text").innerHTML = "You picked ask to use charger";
+        document.getElementById("text").innerHTML = "You ask the owner if you can use the charger";
         displayNoneList();
         setTimeout(mobilePhone, 2000);
     } else if (choice == "Leave") {
-        document.getElementById("text").innerHTML = "You picked Leave";
+        document.getElementById("text").innerHTML = "You leave";
         displayNoneList();
         setTimeout(leave, 2000);
     } else {
@@ -66,7 +66,7 @@ function pieceOfPaper() {
 function businessCard() {
     document.querySelector('ul').style.display = "flex";
     document.getElementById("text").innerHTML = "The Business Card has an address written on it, after several hours asking strangers for directions. You arrive at the address. It's an unimaginably tall skycraper with armed guards standing outside, do you...";
-    document.getElementById("option1").innerHTML = "Attack the guards";
+    document.getElementById("option1").innerHTML = "Attack the gaurds";
     document.getElementById("option2").innerHTML = "Try to enter";
     document.getElementById("option3").innerHTML = "Leave";
 }
