@@ -1,5 +1,0 @@
-1. pseudocode/flowchart
-2. HTML
-3. CSS
-4. javascript
-5. jsdoc
