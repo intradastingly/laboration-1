@@ -138,4 +138,4 @@ function leave(){
 
 
 //add end page with play again options. 
-
+// add javascript to autoplay unmuted video and override google chrome settings. 
