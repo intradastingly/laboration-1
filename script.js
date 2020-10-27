@@ -24,7 +24,7 @@ function userChoice() {
         displayNoneList();
         setTimeout(mobilePhone, 2000);
     } else if (choice == "Talk to the man") {
-        document.getElementById("text").innerHTML = "Why hello there, good sir! Would you by any chance happen to know who George Hungus is?";
+        document.getElementById("text").innerHTML = "You talk to the man";
         displayNoneList();
         setTimeout(talkToTheMan, 4000);
     } else if (choice == "Knock on door") {
@@ -49,7 +49,8 @@ function userChoice() {
         setTimeout(function(){location.href="start.html"}, 3000)
     } else if (choice == "No") {
         document.getElementById("text").innerHTML = "You wander around the bar asking the patrons who George Hungus might be, one of them, an 80% cyborg/slash humanoid says that he's just stepped out for some fresh air. You go back outside and talk to George Hungus.";
-        setTimeout(backOutside, 4000);     
+        displayNoneList();
+        setTimeout(talkToTheMan, 4000);     
     } else if (choice == "Leave") {
         document.getElementById("text").innerHTML = "You leave";
         displayNoneList();
@@ -89,11 +90,7 @@ function mobilePhone() {
 
 //second choice iteration
 function talkToTheMan() {
-    document.querySelector('ul').style.display = "flex";
-    document.getElementById("text").innerHTML = "The Piece of paper has a name written on it, George Hungus, after several hours asking strangers for directions. You arrive at the persons address. There is a man leaning against the wall next to the door, do you...";
-    document.getElementById("option1").innerHTML = "Talk to the man";
-    document.getElementById("option2").innerHTML = "Knock on the door";
-    document.getElementById("option3").innerHTML = "Leave";
+    document.getElementById("text").innerHTML = "Are you George Hungus? you ask the man. It takes a moment but finally he recognizes you... Player, is that you???";
 }
 
 function knockOnTheDoor() {
