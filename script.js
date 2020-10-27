@@ -1,21 +1,27 @@
 
 /**
- * on user input takes user input from input box in index
- 
+ * @returns {user input} returns the text that the user input into input box
  */
 function onUserInput() {
     let choice = document.getElementById('choice').value;
     return choice;
 }
 
+/** removes unordered list from DOM */
 function displayNoneList() {
     document.querySelector('ul').style.display = "none";
 }
 
+/** Adds unordered list to DOM */
 function displayList() {
     document.querySelector('ul').style.display = "flex";
 }
 
+/**  
+ * Takes text input from onUserInput function and applies if else statement to it to get correct 
+ * DOM change sequence. All possible user choices are contained within the function.
+ * setTimeout function is set on the pre execution of proceeding functions to give user time to read the text.
+*/
 function userChoice() {
     let choice = onUserInput();
     displayNoneList()
@@ -59,6 +65,9 @@ function userChoice() {
     }
 }
 
+/** Winning function executes if final user input corresponds, 
+ * removes DOM buttons and input, allows user to restart game 
+ * */
 function win(){
     displayNoneList()
     document.getElementById("text").innerHTML = "Congratulations, Player420.6969, you've escaped the infinite hangover death loop, you should feel proud of yourself! Would you like to play again? ";
@@ -67,8 +76,9 @@ function win(){
     document.getElementById("buttonRestart").innerHTML = "Play again";
 }
 
-//user choice executes function based on user input
+
 //first choice iteraion
+/** Changes DOM based on user input to paper sequence*/
 function pieceOfPaper() {
     displayList()
     document.getElementById("text").innerHTML = "The Piece of paper has a name written on it, George Hungus, after several hours asking strangers for directions. You arrive at the persons address. There is a man leaning against the wall next to the door, do you...";
@@ -77,6 +87,7 @@ function pieceOfPaper() {
     document.getElementById("option3").innerHTML = "Leave";
 }
 
+/** Changes DOM based on user input to business card sequence*/
 function businessCard() {
     displayList()
     document.getElementById("text").innerHTML = "The Business Card has an address and the name George Hungus printed on it, after several hours asking strangers for directions. You arrive at the address. It's an unimaginably tall skycraper with armed guards standing outside, do you...";
@@ -85,6 +96,7 @@ function businessCard() {
     document.getElementById("option3").innerHTML = "Leave";
 }
 
+/** Changes DOM based on user input to mobile phone sequence*/
 function mobilePhone() {
     displayList()
     document.getElementById("text").innerHTML = "After wandering around the city for a few hours, asking people if they have a charger(it's an ancient 2020 model phone). You find an antique shop that sells it";
@@ -95,6 +107,7 @@ function mobilePhone() {
 //first choice iteraion
 
 //second choice iteration
+/** Continuation of piece of paper sequence*/
 function knockOnTheDoor() {
     displayList()
     document.getElementById('option3').style.display = "none";
@@ -103,6 +116,7 @@ function knockOnTheDoor() {
     document.getElementById("option2").innerHTML = "No";
 }
 
+/** Continuation of business card sequence*/
 function enterBuilding() {
     displayList()
     document.getElementById("text").innerHTML = "You manage to get past the gaurds, unsure of what to do you ask to see the owner of the building at the reception desk, the receptionist directs you to managers office on the top floor. You exit the elevator and enter the office of George Hungus"; document.getElementById("option1").innerHTML = "Yes";
@@ -111,6 +125,7 @@ function enterBuilding() {
     document.getElementById("option3").innerHTML = "Leave";
 }
 
+/** Continuation of mobile phone sequence*/
 function antiqueStore() {
     displayList()
     document.getElementById("text").innerHTML = "After wandering around the city for a few hours, asking people if they have a charger(it's an ancient 2020 model phone). You find an antique shop that carries the charger you need";
@@ -121,6 +136,7 @@ function antiqueStore() {
 //second choice iteration
 
 //third choice iteration 
+/** Continuation of mobile phone sequence*/
 function chargePhone() {
     displayList()
     document.getElementById('option3').style.display = "none";
@@ -129,6 +145,7 @@ function chargePhone() {
     document.getElementById("option2").innerHTML = "Leave";
 }
 
+/** Final sequence if Nah selected game won, if not restarted*/
 function talkToTheMan() {
     displayList()
     document.getElementById("text").innerHTML = "Are you George Hungus? you ask the man. It takes a moment but finally he recognizes you... Player420.6969, is that you??? I've been looking for you all over! I've been wanting to take you up on your offer for a drink, what do you say?";
@@ -137,6 +154,7 @@ function talkToTheMan() {
 }
 
 //Leave loop to first question series 
+/** If leave input by user, the function loops back and the user can restart a different line*/
 function leave() {
     displayList()
     document.getElementById("text").innerHTML = "Well... I guess I could try one of the other options..";
