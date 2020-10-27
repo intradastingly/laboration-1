@@ -1,5 +1,4 @@
 
-
 function onUserInput() {
     let choice = document.getElementById('choice').value;
     return choice;
