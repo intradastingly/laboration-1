@@ -1,4 +1,8 @@
 
+/**
+ * on user input takes user input from input box in index
+ 
+ */
 function onUserInput() {
     let choice = document.getElementById('choice').value;
     return choice;
@@ -41,7 +45,7 @@ function userChoice() {
         setTimeout(function () { location.href = "start.html" }, 3000)
     } else if (choice == "No") {
         document.getElementById("text").innerHTML = "You wander around the bar asking the patrons who George Hungus might be, one of them, an 80% cyborg/slash humanoid says that he's just stepped out for some fresh air. You go back outside and talk to George Hungus.";
-        setTimeout(talkToTheMan, 4000);
+        setTimeout(talkToTheMan, 6000);
     } else if (choice == "Leave") {
         document.getElementById("text").innerHTML = "You leave";
         setTimeout(leave, 2000);
@@ -58,8 +62,12 @@ function userChoice() {
 function win(){
     displayNoneList()
     document.getElementById("text").innerHTML = "Congratulations, Player420.6969, you've escaped the infinite hangover death loop, you should feel proud of yourself! Would you like to play again? ";
+    document.getElementById('buttonConfirm').style.display = "none";
+    document.getElementById('choice').style.display = "none";
+    document.getElementById("buttonRestart").innerHTML = "Play again";
 }
 
+//user choice executes function based on user input
 //first choice iteraion
 function pieceOfPaper() {
     displayList()
@@ -115,15 +123,14 @@ function antiqueStore() {
 //third choice iteration 
 function chargePhone() {
     displayList()
-    document.getElementById('option2').style.display = "none";
+    document.getElementById('option3').style.display = "none";
     document.getElementById("text").innerHTML = "The store owner is an incredibly pleasant Alien type of creature who of course lets you use the charger for your phone. You wait patiently as it charges, once it's charged you turn it on only to find that you have a single contact, George Hungus";
     document.getElementById("option1").innerHTML = "Call number";
-    document.getElementById("option3").innerHTML = "Leave";
+    document.getElementById("option2").innerHTML = "Leave";
 }
 
 function talkToTheMan() {
     displayList()
-    document.getElementById('option3').style.display = "none";
     document.getElementById("text").innerHTML = "Are you George Hungus? you ask the man. It takes a moment but finally he recognizes you... Player420.6969, is that you??? I've been looking for you all over! I've been wanting to take you up on your offer for a drink, what do you say?";
     document.getElementById("option1").innerHTML = "Sure";
     document.getElementById("option2").innerHTML = "Nah";
@@ -138,4 +145,4 @@ function leave() {
     document.getElementById("option3").innerHTML = "Mobile phone";
 }
 
-// add javascript to autoplay unmuted video and override google chrome settings. 
+
