@@ -22,7 +22,7 @@ function userChoice() {
         document.getElementById("text").innerHTML = "You try to turn on the phone but the battery is dead";
         displayNoneList();
         setTimeout(mobilePhone, 2000);
-    } else if (choice == "Talk to the man") {
+    } else if (choice == "Talk") {
         document.getElementById("text").innerHTML = "You talk to the man";
         displayNoneList();
         setTimeout(talkToTheMan, 4000);
@@ -32,13 +32,11 @@ function userChoice() {
         setTimeout(knockOnTheDoor, 2000);
     } else if (choice == "Attack the gaurds") {
         window.location.href = './died.html';
-    } else if (choice == "Try to enter") {
+    } else if (choice == "Enter building") {
         document.getElementById("text").innerHTML = "You begin walking towards the armed gaurds, who all turn to look at you, scowling";
         displayNoneList();
-        setTimeout(mobilePhone, 2000);
-    } else if (choice == "Rob the antique store") {
-        window.location.href = './died.html';
-    } else if (choice == "Ask to use charger") {
+        setTimeout(enterBuilding, 2000);
+    }  else if (choice == "Ask to use charger") {
         document.getElementById("text").innerHTML = "You ask the owner if you can use the charger";
         displayNoneList();
         setTimeout(mobilePhone, 2000);
@@ -54,6 +52,8 @@ function userChoice() {
         document.getElementById("text").innerHTML = "You leave";
         displayNoneList();
         setTimeout(leave, 2000);
+    } else if (choice == "Rob the antique store" || choice == "Attack the gaurds" || choice == "Jump out window") {
+        window.location.href = './died.html';
     } else {
         document.getElementById("text").innerHTML = "Please select an option";
     }
@@ -65,16 +65,16 @@ function userChoice() {
 function pieceOfPaper() {
     document.querySelector('ul').style.display = "flex";
     document.getElementById("text").innerHTML = "The Piece of paper has a name written on it, George Hungus, after several hours asking strangers for directions. You arrive at the persons address. There is a man leaning against the wall next to the door, do you...";
-    document.getElementById("option1").innerHTML = "Talk to the man";
+    document.getElementById("option1").innerHTML = "Talk";
     document.getElementById("option2").innerHTML = "Knock on door";
     document.getElementById("option3").innerHTML = "Leave";
 }
 
 function businessCard() {
     document.querySelector('ul').style.display = "flex";
-    document.getElementById("text").innerHTML = "The Business Card has an address written on it, after several hours asking strangers for directions. You arrive at the address. It's an unimaginably tall skycraper with armed guards standing outside, do you...";
+    document.getElementById("text").innerHTML = "The Business Card has an address and the name George Hungus printed on it, after several hours asking strangers for directions. You arrive at the address. It's an unimaginably tall skycraper with armed guards standing outside, do you...";
     document.getElementById("option1").innerHTML = "Attack the gaurds";
-    document.getElementById("option2").innerHTML = "Try to enter";
+    document.getElementById("option2").innerHTML = "Enter building";
     document.getElementById("option3").innerHTML = "Leave";
 }
 
@@ -89,7 +89,8 @@ function mobilePhone() {
 
 //second choice iteration
 function talkToTheMan() {
-    document.getElementById("text").innerHTML = "Are you George Hungus? you ask the man. It takes a moment but finally he recognizes you... Player, is that you???";
+    displayNoneList()
+    document.getElementById("text").innerHTML = "Are you George Hungus? you ask the man. It takes a moment but finally he recognizes you... Player, is that you??? I've been looking for you all over!";
 }
 
 function knockOnTheDoor() {
@@ -99,11 +100,11 @@ function knockOnTheDoor() {
     document.getElementById("option2").innerHTML = "No";
 }
 
-function TryToEnter() {
+function enterBuilding() {
     document.querySelector('ul').style.display = "flex";
-    document.getElementById("text").innerHTML = "After wandering around the city for a few hours, asking people if they have a charger(it's an ancient 2020 model phone). You find an antique shop that sells it";
-    document.getElementById("option1").innerHTML = "Rob the antique store";
-    document.getElementById("option2").innerHTML = "Ask to use charger";
+    document.getElementById("text").innerHTML = "You manage to get past the gaurds, unsure of what to do you ask to see the owner of the building at the reception desk, the receptionist directs you to managers office on the top floor. You exit the elevator and enter the office of George Hungus";document.getElementById("option1").innerHTML = "Yes";
+    document.getElementById("option1").innerHTML = "Talk";
+    document.getElementById("option2").innerHTML = "Jump out window";
     document.getElementById("option3").innerHTML = "Leave";
 }
 
@@ -125,7 +126,7 @@ function talkToGeorgeHungus() {
     document.getElementById("option3").innerHTML = "Leave";
 }
 
-//Leave loop to first question series option
+//Leave loop to first question series 
 function leave(){
     document.querySelector('ul').style.display = "flex";
     document.getElementById("text").innerHTML = "Well... I guess I could try one of the other options..";
