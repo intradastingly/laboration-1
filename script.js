@@ -27,7 +27,7 @@ function userChoice() {
         document.getElementById("text").innerHTML = "Why hello there, good sir! Would you by any chance happen to know who George Hungus is?";
         displayNoneList();
         setTimeout(talkToTheMan, 4000);
-    } else if (choice == "Knock on the door") {
+    } else if (choice == "Knock on door") {
         document.getElementById("text").innerHTML = "You step forward and knock on the door";
         displayNoneList();
         setTimeout(knockOnTheDoor, 2000);
@@ -45,9 +45,10 @@ function userChoice() {
         setTimeout(mobilePhone, 2000);
     } else if (choice == "Yes") {
         document.getElementById("text").innerHTML = "You join the party";  
-        setTimeout(function(){location.href="start.html", 4000})//starts too quickly?
+        displayNoneList();
+        setTimeout(function(){location.href="start.html"}, 3000)
     } else if (choice == "No") {
-        document.getElementById("text").innerHTML = "You wander around the bar asking the patrons who George Hungus might be, one of them, an 80% cyborg/slash humanoid says that he's just stepped out for some fresh air. You go back outside.";
+        document.getElementById("text").innerHTML = "You wander around the bar asking the patrons who George Hungus might be, one of them, an 80% cyborg/slash humanoid says that he's just stepped out for some fresh air. You go back outside and talk to George Hungus.";
         setTimeout(backOutside, 4000);     
     } else if (choice == "Leave") {
         document.getElementById("text").innerHTML = "You leave";
@@ -65,7 +66,7 @@ function pieceOfPaper() {
     document.querySelector('ul').style.display = "flex";
     document.getElementById("text").innerHTML = "The Piece of paper has a name written on it, George Hungus, after several hours asking strangers for directions. You arrive at the persons address. There is a man leaning against the wall next to the door, do you...";
     document.getElementById("option1").innerHTML = "Talk to the man";
-    document.getElementById("option2").innerHTML = "Knock on the door";
+    document.getElementById("option2").innerHTML = "Knock on door";
     document.getElementById("option3").innerHTML = "Leave";
 }
 
@@ -97,7 +98,7 @@ function talkToTheMan() {
 
 function knockOnTheDoor() {
     document.querySelector('ul').style.display = "flex";
-    document.getElementById("text").innerHTML = "Turns out that the address people had been pointing you to was a secret bar, there is some kind of party happening, space booze on the house";
+    document.getElementById("text").innerHTML = "An obviously drunk man opens the door and welcomes you in. Turns out that the address people had been pointing you to was a secret bar, there is some kind of party happening, space booze on the house!!! Have one drink?";
     document.getElementById("option1").innerHTML = "Yes";
     document.getElementById("option2").innerHTML = "No";
 }
@@ -121,8 +122,11 @@ function AskToUseCharger() {
 
 //third choice iteration 
 
-function backOutside() {
-
+function talkToGeorgeHungus() {
+    document.getElementById("text").innerHTML = "After wandering around the city for a few hours, asking people if they have a charger(it's an ancient 2020 model phone). You find an antique shop that sells it";
+    document.getElementById("option1").innerHTML = "Rob the antique store";
+    document.getElementById("option2").innerHTML = "Ask to use charger";
+    document.getElementById("option3").innerHTML = "Leave";
 }
 
 //Leave loop to first question series option
