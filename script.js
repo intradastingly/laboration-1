@@ -3,7 +3,7 @@
  * @returns {user input} returns the text that the user input into input box
  */
 function onUserInput() {
-    let choice = document.getElementById('choice').value;
+    const choice = document.getElementById('choice').value;
     return choice;
 }
 
@@ -23,7 +23,7 @@ function displayList() {
  * setTimeout function is set on the pre execution of proceeding functions to give user time to read the text.
 */
 function userChoice() {
-    let choice = onUserInput();
+    const choice = onUserInput();
     displayNoneList()
     if (choice == "Piece of paper") {
         document.getElementById("text").innerHTML = "You take the piece of paper out of your pocket and read it";
@@ -48,7 +48,7 @@ function userChoice() {
         setTimeout(chargePhone, 2000);
     } else if (choice == "Yes" || choice == "Sure") {
         document.getElementById("text").innerHTML = "PARTY TIME!!!";
-        setTimeout(function () { location.href = "start.html" }, 3000)
+        setTimeout(function () { location.href = "index.html" }, 3000)
     } else if (choice == "No") {
         document.getElementById("text").innerHTML = "You wander around the bar asking the patrons who George Hungus might be, one of them, an 80% cyborg/slash humanoid says that he's just stepped out for some fresh air. You go back outside and talk to George Hungus.";
         setTimeout(talkToTheMan, 6000);
@@ -148,6 +148,7 @@ function chargePhone() {
 /** Final sequence if Nah selected game won, if not restarted*/
 function talkToTheMan() {
     displayList()
+    document.getElementById('option3').style.display = "none";
     document.getElementById("text").innerHTML = "Are you George Hungus? you ask the man. It takes a moment but finally he recognizes you... Player420.6969, is that you??? I've been looking for you all over! I've been wanting to take you up on your offer for a drink, what do you say?";
     document.getElementById("option1").innerHTML = "Sure";
     document.getElementById("option2").innerHTML = "Nah";
