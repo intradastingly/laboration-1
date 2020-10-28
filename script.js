@@ -18,7 +18,7 @@ function displayList() {
 }
 
 /**  
- * Takes text input from onUserInput function and applies if else statement to it to get correct 
+ * Takes text input from onUserInput function and applies if else statement to it to get correct answer on confirm 
  * DOM change sequence. All possible user choices are contained within the function.
  * setTimeout function is set on the pre execution of proceeding functions to give user time to read the text.
 */
