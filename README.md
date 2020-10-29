@@ -8,5 +8,6 @@ The game consists of text with a maximum of 3 possible user choices. A confirmat
 If the user selects the collect story line they are eventually granted a win and are given the option to restart the game.
 
 ### link to github page
-link to the game [here](https://intradastingly.github.io/laboration-1/)
+Link to repo[here](https://github.com/intradastingly/laboration-1.git)
+Link to the game [here](https://intradastingly.github.io/laboration-1/)
 
