@@ -9,5 +9,5 @@ If the user selects the collect story line they are eventually granted a win and
 
 ### link to github page
 Link to repo [here](https://github.com/intradastingly/laboration-1.git)
-Link to the game [here](https://intradastingly.github.io/laboration-1/)
+and link to the game [here](https://intradastingly.github.io/laboration-1/)
 
