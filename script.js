@@ -162,7 +162,7 @@ function talkToTheMan() {
 }
 
 //Leave loop to first question series 
-/** If leave input by user, the function loops back and the user can restart a different answer line.*/
+/** If leave id input by user, the function loops back and the user can restart a different answer line.*/
 function leave() {
     displayList()
     document.getElementById("text").innerHTML = "Well... I guess I could try one of the other options..";
