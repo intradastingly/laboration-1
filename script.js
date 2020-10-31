@@ -12,7 +12,6 @@ userInput.oninput = function() {
 function onUserInput(){
     const choice = document.getElementById('choice').value;
         return choice;
-        console.log(choice);
 }
 
 /** removes the unordered list from DOM.*/
